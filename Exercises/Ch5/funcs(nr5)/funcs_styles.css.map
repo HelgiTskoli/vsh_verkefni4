@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;GAEG;AAIH,MAAM;EACF,gBAAgB,EAAC,IAAc;;AAEnC,OAAO;EACH,gBAAgB,EAAC,OAAmB;;AAExC,MAAM;EACF,gBAAgB,EAAC,OAAkB",
+"sources": ["funcs_styles.scss"],
+"names": [],
+"file": "funcs_styles.css"
+}

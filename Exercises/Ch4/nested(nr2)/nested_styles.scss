@@ -1,0 +1,22 @@
+/*
+ * SASS allows style rules to be nested inside of other rules, which causes
+ * the nested rules to only apply within the outer rule's selector
+ */
+
+header{
+    border: solid red 1px;
+    h1{
+        color: blue;
+    }
+    nav{
+        // Nav er ekki í "SampleDoc" en verkefnið segir að það á að breyta því tagi.
+        border: solid red 1px;
+    }
+    h3{
+        color: green;
+    }
+    a{
+        text-align: left;
+    }
+
+}

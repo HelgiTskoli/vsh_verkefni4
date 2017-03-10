@@ -1,0 +1,19 @@
+/*
+ * SASS Operators example
+ */
+
+$tala10: 10px;
+$tala5: 5px;
+$tala8:  8px;
+
+$tala23: $tala10+$tala5+$tala8;
+
+h1{
+    font-size: $tala23;
+}
+h2{
+    font-size:$tala5+$tala8;
+}
+h3{
+    font-size: $tala23+7;
+}

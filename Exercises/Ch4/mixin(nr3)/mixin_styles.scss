@@ -1,0 +1,23 @@
+/*
+ * SASS mixins are declared with the @mixin directive
+ * and used with the @include directive
+ */
+
+@mixin oft_notadur_border{
+    border: solid red 2px;
+    padding: 13px;
+    box-shadow: 5px 5px;
+}
+
+header{
+    background-color: lightgray;
+    @include oft_notadur_border;
+}
+.mypara{
+    background-color: lightpink;
+    @include oft_notadur_border;
+}
+footer{
+    background-color: lightgreen;
+    @include oft_notadur_border;
+}

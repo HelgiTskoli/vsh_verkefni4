@@ -1,0 +1,78 @@
+/* 
+ * SASS Variables are defined with a $ character
+ * and can have different kinds of data types: color, string, boolean, multi-value
+ */
+h1 {
+  color: yellow; }
+
+h2, h3 {
+  color: green; }
+
+.mypara {
+  background-color: green; }
+
+.mypara:hover {
+  background-color: yellow; }
+
+/*
+ * SASS allows style rules to be nested inside of other rules, which causes
+ * the nested rules to only apply within the outer rule's selector
+ */
+header {
+  border: solid red 1px; }
+  header h1 {
+    color: blue; }
+  header nav {
+    border: solid red 1px; }
+  header h3 {
+    color: green; }
+  header a {
+    text-align: left; }
+
+/*
+ * SASS mixins are declared with the @mixin directive
+ * and used with the @include directive
+ */
+header {
+  background-color: lightgray;
+  border: solid red 2px;
+  padding: 13px;
+  box-shadow: 5px 5px; }
+
+.mypara {
+  background-color: lightpink;
+  border: solid red 2px;
+  padding: 13px;
+  box-shadow: 5px 5px; }
+
+footer {
+  background-color: lightgreen;
+  border: solid red 2px;
+  padding: 13px;
+  box-shadow: 5px 5px; }
+
+/*
+ * SASS Operators example
+ */
+h1 {
+  font-size: 23px; }
+
+h2 {
+  font-size: 13px; }
+
+h3 {
+  font-size: 30px; }
+
+/*
+ * Using functions in SASS
+ */
+header {
+  background-color: cyan; }
+
+.mypara {
+  background-color: #ff8080; }
+
+footer {
+  background-color: #4d0000; }
+
+/*# sourceMappingURL=all_scss_imported_in_one.css.map */

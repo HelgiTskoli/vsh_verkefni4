@@ -1,0 +1,1 @@
+Allar "sample doc" skrárnar sem eru í hverri möppu eru eins nema eru tengdar við css skránna sem unnið er með í þeim lið. 

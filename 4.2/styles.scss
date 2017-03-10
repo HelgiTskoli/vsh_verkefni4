@@ -1,0 +1,319 @@
+﻿@import "normalize.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway|Playfair+Display|Sansita');
+/*
+    font-family: 'Playfair Display', serif;  - NAV font
+    font-family: 'Sansita', sans-serif;      - Aside 1 og 2 font
+    font-family: 'Raleway', sans-serif;      - Article, Header og Footer font
+*/
+
+$col_blue_vi: blueviolet;
+$col_l_blue: lightblue;
+$col_tom: tomato;
+$col_ora: orange;
+$col_gre: green;
+
+body{
+    margin: 0 auto;
+    section, footer, header {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 70em-10;
+        margin: 0 auto;
+    }
+}
+header{
+    background-color: $col_blue_vi;
+    order: 1;
+    padding-left: 15px;
+    font-family: 'Raleway', sans-serif;
+}
+article {
+    background-color: $col_tom;
+    width: 100%;
+    order: 2;
+    padding: 30px-10;
+    font-family: 'Raleway', sans-serif;
+    h1{
+        font-size: x-large;
+    }
+    img{
+        height: 200px-40;
+        width: 200px-40;
+        display:block; 
+        border: solid $col_ora 1px;
+        margin: 0px;
+    }
+    div{
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        flex-flow: column wrap;
+    }
+}
+
+.aside1{
+    background-color: $col_ora;
+    width: 100%;
+    order: 3;
+    padding: 15px;
+    font-family: 'Sansita', sans-serif;
+}
+
+.aside2{
+    background-color: $col_ora;
+    width: 100%;
+    order: 4;
+    padding: 15px;
+    font-family: 'Sansita', sans-serif;
+}
+
+
+footer {
+    order: 5;
+    background-color: $col_gre;
+    width: 100%;
+    padding: 10px;
+    padding-top: 0px;
+    border-radius: 0px 0px 12px 12px;
+    font-family: 'Raleway', sans-serif;
+    /* Box - start*/
+    
+    /* Box ~ End*/
+}
+#four_boxes {
+    position: relative;
+    color: white;
+    width: 245em;
+    margin: 1px;
+    height: 3.5em;
+    a {
+        display: inline-block;
+    }
+    @mixin boxes($color){
+        border: hidden;
+        background-color: $color;
+        text-align: center;
+        padding-top: 14px;
+        transition: all 0.4s ease;
+        width: 3em;
+        height: 3em;
+    }
+    #box1 {
+        @include boxes($col_l_blue);
+    }
+
+    #box2 {
+        @include boxes($col_blue_vi);
+    }
+
+    #box3 {
+        @include boxes($col_ora);
+    }
+
+    #box4 {
+        @include boxes($col_tom);
+    }
+    #box1:hover, #box2:hover, #box3:hover, #box4:hover{
+        width: 3em;
+        padding-top: 7px; 
+    }
+}
+#bottom_signature {
+    margin: auto;
+}
+
+/* Navigation - start*/
+input{
+    display: none;
+    &:checked ~ nav{
+        bottom: 0px;
+    }
+    &:checked ~ label{
+        background-color: rgba(0, 255, 255, 0.5);
+        border-left: 1px solid black;
+        border-right: solid black 1px;
+    }
+}
+
+nav{
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom:-300px;
+    transition: bottom 0.7s, left 1s ease;
+    background-color: white;
+    border-radius: 12px 12px 0px 0px;
+    z-index: 3; 
+    padding-bottom: 30px;
+    ul{
+        padding: 0px;
+        margin: 0px;
+        li {
+            display: block;
+            width: 97%;
+            padding: 10px;
+            background-color: $col_l_blue;
+            margin: 5px auto;
+            margin-bottom: 0px;
+            transition: padding-bottom 0.3s, background-color 0.7s;
+            transform: rotateY(0deg);
+            color: darkcyan;
+            &:hover {
+                background-color: #68C5E3;
+            }
+            a{
+                font-family: 'Playfair Display', serif;
+                text-decoration: none;
+                font-weight: bold;
+                .a_t{
+                    border-radius: 12px 12px 0px 0px;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }   
+    .topmenu{
+        list-style-type: none;
+        border: solid black 1px;
+        border-radius: 12px 12px 0px 0px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+        max-width: 60em;
+        background-color: rgba(0, 255, 255, 0.5);
+        border-bottom: 0px;
+    }
+}
+
+label{
+    border: hidden;
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding-top: 7px;
+    text-align: center;
+    bottom:0px;
+    background-color:rgba(128, 128, 128, 0.7);
+    transition: background-color 0.3s;
+    z-index: 4;
+    &:hover{
+        background-color:rgba(128, 128, 128, 0.8); 
+    }
+}
+/* Navigation - end*/
+
+
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  clear: both;
+  *zoom: 1;
+}
+
+@media (min-width: 30em) and (max-width: 37.5em){
+    article {
+        div{
+            flex-flow: row wrap;
+            width: 320px;
+            margin: auto;
+        }
+    }
+}
+@media (min-width: 37.5em) and (max-width: 48em){
+    .aside1, .aside2{
+        width: 50%;
+    }
+}
+@media (min-width:37.5em){
+    /* Media query fyrir myndirnar */
+    article{
+        img{
+            width: 110px;
+            height: 110px;
+        }
+        div{
+            flex-flow: row wrap;
+            width:440px;
+            margin: auto;
+        }
+    }
+}
+@media (min-width: 48em) {
+    /* Lögun á röðun ~ Start*/
+    .aside1{
+        order: 2;
+        width: 5%;
+        flex: 1 1 0;
+    }
+    .aside2{
+        order: 4;
+        width: 5%;
+        flex: 1 1 0;
+    }
+    article{
+        order: 3;
+        width: 50%;
+        flex: 2 2 1em;
+    }
+    /* Lögun á röðun ~ End*/
+
+    /* Navigation - lögun ~ Start*/
+    label{
+        display: none;
+    }
+    nav{
+        position: relative;
+        bottom: unset;
+        display: inline-block;
+        padding-bottom: 0px;
+        ul{
+            li{
+                display: inline-block;
+                width: 9.3em;
+                margin-top: 0px;
+                transition: all 0.5s ease;
+                transform: rotateY(180deg);
+                &:hover {
+                    transform: rotateY(360deg);
+                }
+                .a_t{
+                    border-radius: 0px;
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+    /* Navigation - lögun ~ End*/
+
+}   
+@media (min-width: 64em){
+
+    /* Box - lögun ~ Start */
+    #four_boxes {
+        position: fixed;
+        top: 100px;
+        left: -1px;
+        a{
+            display: block;
+        }
+        #box1:hover, #box2:hover, #box3:hover, #box4:hover{
+            width: 68px;
+            padding-top: 14px;
+        }
+    }
+}

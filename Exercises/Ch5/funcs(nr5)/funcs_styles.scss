@@ -1,0 +1,15 @@
+/*
+ * Using functions in SASS
+ */ 
+
+$rautt: red;
+
+header{
+    background-color:invert($rautt);
+}
+.mypara{
+    background-color:lighten($rautt,25%);
+}
+footer{
+    background-color:darken($rautt,35%);
+}

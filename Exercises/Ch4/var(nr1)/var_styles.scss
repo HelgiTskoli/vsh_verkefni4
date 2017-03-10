@@ -1,0 +1,27 @@
+/* 
+ * SASS Variables are defined with a $ character
+ * and can have different kinds of data types: color, string, boolean, multi-value
+ */
+
+$litur1: green;
+$litur2: yellow;
+
+$Texti: "Kalli á hús";
+
+$Tala1: 10;
+
+$Mismunandi_gildi: 1px 45xp 4em 22px;
+
+h1{
+    color: $litur2;
+}
+h2,h3{
+    color: $litur1;
+}
+.mypara{
+    background-color: $litur1;
+}
+.mypara:hover{
+    background-color: $litur2;    
+}
+
